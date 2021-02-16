@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 
-export const People = () => {
+export const Planets = () => {
 	return (
 		<div className="Card-deck">
 			<Card>
