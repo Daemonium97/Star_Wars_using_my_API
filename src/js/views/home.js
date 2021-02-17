@@ -6,15 +6,15 @@ import Iframe from "react-iframe";
 export const Carrusel = () => {
 	return (
 		<Carousel>
-			<Iframe
-				id="music"
-				width="100%"
-				height="315"
-				src="https://www.youtube.com/embed/pilqN-Q_2Vw?controls=0&amp;start=28"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen
-			/>
+			{/* // 	<Iframe
+		// 		id="music"
+		// 		width="100%"
+		// 		height="315"
+		// 		src="https://www.youtube.com/embed/pilqN-Q_2Vw?controls=0&amp;start=28"
+		// 		frameborder="0"
+		// 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+		// 		allowfullscreen
+		// 	/> */}
 
 			<Carousel.Item>
 				<Link to="/people/ka">

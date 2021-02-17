@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { Carrusel } from "./views/home";
 
-import injectContext from "./store/appContext";
+import injectContext, { Context } from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
@@ -17,6 +17,11 @@ const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
 	const basename = process.env.BASENAME || "";
+	const { store, actions } = useContext(Context);
+	useEffect(() => {
+		actions.getPeople();
+		actions.getPlanets();
+	}, []);
 
 	return (
 		<div className="d-flex flex-column">
@@ -28,25 +33,17 @@ const Layout = () => {
 					</Route>
 
 					<Route exact path="/people/:theid">
-						<People />
+						<People data={store.people} />
 					</Route>
 					<Route exact path="/infoPeople/:theid">
-						<InfoPeople
-							title="Pedro Perez"
-							description="Juega de muerto"
-							image="https://pbs.twimg.com/media/EWzpD8oXgAEb45H.jpg"
-						/>
+						<InfoPeople />
 					</Route>
 					<Route exact path="/planets/:theid">
-						<Planets />
+						<Planets data={store.planets} />
 					</Route>
 
 					<Route exact path="/infoPlanets/:theid">
-						<InfoPlanets
-							title="Tatuine"
-							description="sfsaddfsda"
-							image="https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png/revision/latest?cb=20131214162357"
-						/>
+						<InfoPlanets />
 					</Route>
 				</Switch>
 				<Footer />
