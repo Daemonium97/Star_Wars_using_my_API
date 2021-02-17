@@ -2,33 +2,32 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import PropTypes from "prop-types";
-import Container from "react-bootstrap/Container";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
 export const Planets = props => {
 	return (
-		// <div className="Card-deck">
-		//     <Card>
-		//         <Card.Img variant="top" src={props.image} />
-		//         <Card.Body>
-		//             <Card.Title>{props.title}</Card.Title>
-		//             <Card.Text>{props.subtitle}</Card.Text>
-		//         </Card.Body>
-		//     </Card>
-		// </div>
-
-		<Container>
+		<Container fluid>
 			<Row>
-				<Col xs={6} md={4}>
-					<Card>
-						<Card.Img variant="top" src={props.image} />
-						<Card.Body>
-							<Card.Title>{props.title}</Card.Title>
-							<Card.Text>{props.subtitle}</Card.Text>
-						</Card.Body>
-					</Card>
-				</Col>
+				{Array.from({ length: 10 }).map((_, index) => (
+					<Col key={index} md={3} className="mt-1 mb-1">
+						<Card>
+							<Card.Img
+								variant="top"
+								src="https://upload.wikimedia.org/wikipedia/en/6/6d/Tatooine_%28fictional_desert_planet%29.jpg"
+							/>
+							<Card.Body>
+								<Card.Title>Card title</Card.Title>
+								<Card.Text>
+									This is a wider card with supporting text below as a natural lead-in to additional
+									content. This content is a little bit longer.
+								</Card.Text>
+							</Card.Body>
+							<Card.Footer>
+								<Button variant="primary">Go somewhere</Button>
+							</Card.Footer>
+						</Card>
+					</Col>
+				))}
 			</Row>
 		</Container>
 	);
