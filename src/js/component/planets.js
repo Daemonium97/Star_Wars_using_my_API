@@ -1,23 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
+import PropTypes from "prop-types";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
-export const Planets = () => {
+export const Planets = props => {
 	return (
-		<div className="Card-deck">
-			<Card>
-				<Card.Img variant="top" src="holder.js/100px160" />
-				<Card.Body>
-					<Card.Title>Card title</Card.Title>
-					<Card.Text>
-						This is a wider card with supporting text below as a natural lead-in to additional content. This
-						content is a little bit longer.
-					</Card.Text>
-				</Card.Body>
-				<Card.Footer>
-					<small className="text-muted">Last updated 3 mins ago</small>
-				</Card.Footer>
-			</Card>
-		</div>
+		// <div className="Card-deck">
+		//     <Card>
+		//         <Card.Img variant="top" src={props.image} />
+		//         <Card.Body>
+		//             <Card.Title>{props.title}</Card.Title>
+		//             <Card.Text>{props.subtitle}</Card.Text>
+		//         </Card.Body>
+		//     </Card>
+		// </div>
+
+		<Container>
+			<Row>
+				<Col xs={6} md={4}>
+					<Card>
+						<Card.Img variant="top" src={props.image} />
+						<Card.Body>
+							<Card.Title>{props.title}</Card.Title>
+							<Card.Text>{props.subtitle}</Card.Text>
+						</Card.Body>
+					</Card>
+				</Col>
+			</Row>
+		</Container>
 	);
+};
+
+Planets.propTypes = {
+	image: PropTypes.any,
+	title: PropTypes.any,
+	subtitle: PropTypes.any
 };

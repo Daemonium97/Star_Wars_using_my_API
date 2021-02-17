@@ -1,23 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
+import PropTypes from "prop-types";
 
-export const People = () => {
+export const People = props => {
 	return (
-		<div className="Card-deck">
+		<div className="card">
 			<Card>
-				<Card.Img variant="top" src="holder.js/100px160" />
-				<Card.Body>
-					<Card.Title>Card title</Card.Title>
-					<Card.Text>
-						This is a wider card with supporting text below as a natural lead-in to additional content. This
-						content is a little bit longer.
-					</Card.Text>
+				<Card.Img variant="top" src={props.image} width="400" height="400" />
+				<Card.Body width="500" height="500">
+					<Card.Title>{props.title}</Card.Title>
+					<Card.Text>{props.subtitle}</Card.Text>
 				</Card.Body>
-				<Card.Footer>
-					<small className="text-muted">Last updated 3 mins ago</small>
-				</Card.Footer>
 			</Card>
 		</div>
 	);
+};
+
+People.propTypes = {
+	image: PropTypes.any,
+	title: PropTypes.any,
+	subtitle: PropTypes.any
 };

@@ -34,10 +34,50 @@ const Layout = () => {
 							<Single />
 						</Route>
 						<Route exact path="/people/:theid">
-							<People />
+							<div className="card-deck d-flex justify-content-center">
+								<People
+									title="Pedro"
+									subtitle="Juega de muerto"
+									image="https://pbs.twimg.com/media/EWzpD8oXgAEb45H.jpg"
+								/>
+								<People
+									title="An"
+									subtitle="Juega carritos"
+									image="https://pbs.twimg.com/media/EWzpD8oXgAEb45H.jpg"
+								/>
+								<People
+									title=" Anakin SkyWalker"
+									subtitle="Juega Jedi"
+									image="https://i2.wp.com/wipy.tv/wp-content/uploads/2020/10/anakin-skywalker-si-era-el-elegido.jpg?fit=1000%2C600&ssl=1"
+								/>
+								<People
+									title=" Anakin SkyWalker"
+									subtitle="Juega Jedi"
+									image="https://i2.wp.com/wipy.tv/wp-content/uploads/2020/10/anakin-skywalker-si-era-el-elegido.jpg?fit=1000%2C600&ssl=1"
+								/>
+								<People
+									title=" Anakin SkyWalker"
+									subtitle="Juega Jedi"
+									image="https://i2.wp.com/wipy.tv/wp-content/uploads/2020/10/anakin-skywalker-si-era-el-elegido.jpg?fit=1000%2C600&ssl=1"
+								/>
+							</div>
 						</Route>
-						<Route>
-							<h1>Not found!</h1>
+						<Route exact path="/planets/:theid">
+							<Planets
+								title="Tatuine"
+								subtitle="sfsaddfsda"
+								image="https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png/revision/latest?cb=20131214162357"
+							/>
+							<Planets
+								title="Casita"
+								subtitle="sfsaddfsda"
+								image="https://hipertextual.com/files/2013/05/Rodaje-de-Tatooine-Star-Wars-Episodio-I.jpg"
+							/>
+							<Planets
+								title="OAAA"
+								subtitle="sfsaddfsda"
+								image="https://i.pinimg.com/originals/d2/a9/25/d2a92586f37fec00c39dc780b1716d38.png"
+							/>
 						</Route>
 					</Switch>
 					<Footer />
