@@ -11,19 +11,15 @@ export const Planets = props => {
 				{Array.from({ length: 10 }).map((_, index) => (
 					<Col key={index} md={3} className="mt-1 mb-1">
 						<Card>
-							<Card.Img
-								variant="top"
-								src="https://upload.wikimedia.org/wikipedia/en/6/6d/Tatooine_%28fictional_desert_planet%29.jpg"
-							/>
+							<Card.Img variant="top" src={props.image} />
 							<Card.Body>
-								<Card.Title>Card title</Card.Title>
-								<Card.Text>
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
-								</Card.Text>
+								<Card.Title>{props.title}</Card.Title>
+								<Card.Text>{props.description}</Card.Text>
 							</Card.Body>
 							<Card.Footer>
-								<Button variant="primary">Go to the force</Button>
+								<Link to="/infoPlanets/:theid">
+									<Button variant="primary">Go to the force</Button>
+								</Link>
 							</Card.Footer>
 						</Card>
 					</Col>
@@ -36,5 +32,5 @@ export const Planets = props => {
 Planets.propTypes = {
 	image: PropTypes.any,
 	title: PropTypes.any,
-	subtitle: PropTypes.any
+	description: PropTypes.any
 };

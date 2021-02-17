@@ -2,28 +2,29 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import PropTypes from "prop-types";
+import { Container, Row, Col, Button, ButtonToolbar } from "react-bootstrap";
 
 export const InfoPlanets = props => {
-	<div className="container">
-		<div>
-			<img
-				src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2020/11/27/16065165259290.jpg"
-				width="400"
-				height="400"
-			/>
-		</div>
-		<div>
-			<Card style={{ width: "18rem" }}>
-				<Card.Body>
-					<Card.Title>Card Title</Card.Title>
-					<Card.Text>{props.subtitle}</Card.Text>
-				</Card.Body>
-			</Card>
-		</div>
-	</div>;
+	return (
+		<Container className="d-flex justify-content-center">
+			<Row>
+				<Col md={3} className="mt-1 mb-2">
+					{Array.from({ length: 1 }).map((_, index) => (
+						<Card style={{ width: "18rem" }} key={index}>
+							<Card.Img variant="top" src={props.image} />
+							<Card.Body>
+								<Card.Title>{props.title}</Card.Title>
+								<Card.Text>{props.description}</Card.Text>
+							</Card.Body>
+						</Card>
+					))}
+				</Col>
+			</Row>
+		</Container>
+	);
 };
 InfoPlanets.propTypes = {
 	title: PropTypes.any,
-	subtitle: PropTypes.any,
+	description: PropTypes.any,
 	image: PropTypes.any
 };

@@ -28,31 +28,25 @@ const Layout = () => {
 					</Route>
 
 					<Route exact path="/people/:theid">
-						<div className="card-deck d-flex justify-content-center">
-							<People
-								title="Pedro"
-								subtitle="Juega de muerto"
-								image="https://pbs.twimg.com/media/EWzpD8oXgAEb45H.jpg"
-							/>
-						</div>
+						<People />
 					</Route>
 					<Route exact path="/infoPeople/:theid">
 						<InfoPeople
-							title="Pedro"
-							subtitle="Juega de muerto"
+							title="Pedro Perez"
+							description="Juega de muerto"
 							image="https://pbs.twimg.com/media/EWzpD8oXgAEb45H.jpg"
 						/>
 					</Route>
 					<Route exact path="/planets/:theid">
-						<Planets
-							title="Tatuine"
-							subtitle="sfsaddfsda"
-							image="https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png/revision/latest?cb=20131214162357"
-						/>
+						<Planets />
 					</Route>
 
-					<Route exact path="/infoPlanets/theid">
-						<InfoPlanets />
+					<Route exact path="/infoPlanets/:theid">
+						<InfoPlanets
+							title="Tatuine"
+							description="sfsaddfsda"
+							image="https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png/revision/latest?cb=20131214162357"
+						/>
 					</Route>
 				</Switch>
 				<Footer />

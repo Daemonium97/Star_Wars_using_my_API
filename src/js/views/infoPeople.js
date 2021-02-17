@@ -6,27 +6,15 @@ import { Container, Row, Col, Button, ButtonToolbar } from "react-bootstrap";
 
 export const InfoPeople = props => {
 	return (
-		<Container>
+		<Container className="d-flex justify-content-center">
 			<Row>
 				<Col md={3} className="mt-1 mb-2">
-					{Array.from({ length: 10 }).map((_, index) => (
+					{Array.from({ length: 1 }).map((_, index) => (
 						<Card style={{ width: "18rem" }} key={index}>
 							<Card.Img variant="top" src={props.image} />
 							<Card.Body>
 								<Card.Title>{props.title}</Card.Title>
-								<Card.Text>{props.subtitle}</Card.Text>
-								<ButtonToolbar
-									className="justify-content-between d-flex"
-									aria-label="Toolbar with Button groups">
-									<Link to="/infoPeople/theid">
-										<Button variant="primary">Get info</Button>
-									</Link>
-									<Link onClick={() => actions.addFavorite(planet.name, "people")}>
-										<Button variant="outline-warning">
-											<i className="far fa-heart" />
-										</Button>
-									</Link>
-								</ButtonToolbar>
+								<Card.Text>{props.description}</Card.Text>
 							</Card.Body>
 						</Card>
 					))}
@@ -38,6 +26,6 @@ export const InfoPeople = props => {
 
 InfoPeople.propTypes = {
 	title: PropTypes.any,
-	subtitle: PropTypes.any,
+	description: PropTypes.any,
 	image: PropTypes.any
 };
