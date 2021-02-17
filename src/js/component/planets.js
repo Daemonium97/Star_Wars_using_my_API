@@ -23,7 +23,7 @@ export const Planets = props => {
 								</Card.Text>
 							</Card.Body>
 							<Card.Footer>
-								<Button variant="primary">Go somewhere</Button>
+								<Button variant="primary">Go to the force</Button>
 							</Card.Footer>
 						</Card>
 					</Col>

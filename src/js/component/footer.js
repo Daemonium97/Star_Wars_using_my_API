@@ -3,7 +3,8 @@ import React, { Component } from "react";
 export const Footer = () => (
 	<footer className="footer mt-auto py-3 text-center">
 		<p>
-			Made with <i className="fas fa-skull" /> by{" "}
+			<span style={{ color: "white" }}>Made with </span>
+			<i className="fas fa-skull" style={{ color: "white" }} /> <span style={{ color: "white" }}>by </span>
 			<a href="https://github.com/Daemonium97?tab=repositories">Daemonium</a>
 		</p>
 	</footer>

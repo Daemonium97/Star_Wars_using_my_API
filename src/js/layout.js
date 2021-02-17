@@ -36,6 +36,13 @@ const Layout = () => {
 							/>
 						</div>
 					</Route>
+					<Route exact path="/infoPeople/:theid">
+						<InfoPeople
+							title="Pedro"
+							subtitle="Juega de muerto"
+							image="https://pbs.twimg.com/media/EWzpD8oXgAEb45H.jpg"
+						/>
+					</Route>
 					<Route exact path="/planets/:theid">
 						<Planets
 							title="Tatuine"
@@ -43,10 +50,8 @@ const Layout = () => {
 							image="https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png/revision/latest?cb=20131214162357"
 						/>
 					</Route>
-					<Route exact path="/infoPeople">
-						<InfoPeople />
-					</Route>
-					<Route exact path="/infoPlanets">
+
+					<Route exact path="/infoPlanets/theid">
 						<InfoPlanets />
 					</Route>
 				</Switch>

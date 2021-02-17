@@ -16,11 +16,14 @@ export const InfoPlanets = props => {
 			<Card style={{ width: "18rem" }}>
 				<Card.Body>
 					<Card.Title>Card Title</Card.Title>
-					<Card.Text>
-						Some quick example text to build on the card title and make up the bulk of the cards content.
-					</Card.Text>
+					<Card.Text>{props.subtitle}</Card.Text>
 				</Card.Body>
 			</Card>
 		</div>
 	</div>;
+};
+InfoPlanets.propTypes = {
+	title: PropTypes.any,
+	subtitle: PropTypes.any,
+	image: PropTypes.any
 };

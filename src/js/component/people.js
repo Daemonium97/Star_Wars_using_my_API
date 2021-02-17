@@ -24,8 +24,8 @@ export const People = props => {
 								</Card.Text>
 							</Card.Body>
 							<Card.Footer>
-								<Link to="/InfoPeople">
-									<Button variant="primary">Go to the force</Button>
+								<Link to="/infoPeople/:theid">
+									<Button variant="primary">Go to </Button>
 								</Link>
 							</Card.Footer>
 						</Card>
