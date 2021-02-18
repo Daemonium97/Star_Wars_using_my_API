@@ -15,12 +15,12 @@ export const InfoPeople = props => {
 							<Card>
 								<Card.Img
 									variant="top"
-									src="https://wipy.tv/wp-content/uploads/2020/02/Luke-Skywalker-se-iba-a-llamar-Luke-Starkiller-2.jpg"
+									src="https://www.orlandosentinel.com/resizer/OhxcxUlLIH0dlcwMZuSne-5hI5o=/1200x0/top/www.trbimg.com/img-52cda019/turbine/os-greatest-star-wars-characters-pictures"
 								/>
 								<Card.Body>
 									<Card.Title>{e.name}</Card.Title>
 									<Card.Text>
-										Birthday
+										Birthday:
 										{e.birth_year}
 									</Card.Text>
 									<Card.Text>Hair Color: {e.hair_color}</Card.Text>

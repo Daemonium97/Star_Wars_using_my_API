@@ -26,7 +26,7 @@ export const Planets = props => {
 										<Link to="/infoPlanet/index">
 											<Button variant="primary">Go To</Button>
 										</Link>
-										<Link onClick={() => actions.addFavorite(planet.name, "planet")}>
+										<Link onClick={() => actions.addFavorite(elem.name, "planet")}>
 											<Button variant="outline-warning">
 												<i className="far fa-heart" />
 											</Button>

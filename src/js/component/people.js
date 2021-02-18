@@ -15,7 +15,7 @@ export const People = props => {
 							<Card>
 								<Card.Img
 									variant="top"
-									src="https://wipy.tv/wp-content/uploads/2020/02/Luke-Skywalker-se-iba-a-llamar-Luke-Starkiller-2.jpg"
+									src="https://www.orlandosentinel.com/resizer/OhxcxUlLIH0dlcwMZuSne-5hI5o=/1200x0/top/www.trbimg.com/img-52cda019/turbine/os-greatest-star-wars-characters-pictures"
 								/>
 								<Card.Body>
 									<Card.Title>{elem.name}</Card.Title>
@@ -23,10 +23,10 @@ export const People = props => {
 									<ButtonToolbar
 										className="justify-content-between d-flex"
 										aria-label="Toolbar with Button groups">
-										<Link to="/infoPeople/:theid">
+										<Link to={`/infoPeople/${index}`}>
 											<Button variant="primary">Go To The Force</Button>
 										</Link>
-										<Link onClick={() => actions.arrayFavorite(people.name, "people")}>
+										<Link onClick={() => actions.addFavorite((elem.name, "people"))}>
 											<Button variant="outline-warning">
 												<i className="far fa-heart" />
 											</Button>

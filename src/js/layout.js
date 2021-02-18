@@ -5,7 +5,7 @@ import { Carrusel, Music } from "./views/home";
 
 import injectContext, { Context } from "./store/appContext";
 
-import { Navbar } from "./component/navbar";
+import { MyNavbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { People } from "./component/people";
 import { Planets } from "./component/planets";
@@ -26,7 +26,7 @@ const Layout = () => {
 	return (
 		<div className="d-flex flex-column">
 			<BrowserRouter basename={basename}>
-				<Navbar />
+				<MyNavbar />
 				<Switch>
 					<Route exact path="/">
 						<Music />
@@ -37,14 +37,14 @@ const Layout = () => {
 						<People data={store.people} />
 					</Route>
 					<Route exact path="/infoPeople/:theid">
-						<InfoPeople />
+						<InfoPeople data={store.people} />
 					</Route>
 					<Route exact path="/planets/:theid">
 						<Planets data={store.planets} />
 					</Route>
 
 					<Route exact path="/infoPlanets/:theid">
-						<InfoPlanets />
+						<InfoPlanets data={store.planets} />
 					</Route>
 				</Switch>
 				<Footer />
