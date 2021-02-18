@@ -81,6 +81,7 @@
 		"mdbreact": "^5.0.1",
 		"prop-types": "^15.6.1",
 		"react": "^16.14.0",
+		"react-audio-player": "^0.14.0",
 		"react-bootstrap": "^1.4.3",
 		"react-dom": "^16.14.0",
 		"react-iframe": "^1.8.0",

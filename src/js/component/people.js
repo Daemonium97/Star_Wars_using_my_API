@@ -19,14 +19,14 @@ export const People = props => {
 								/>
 								<Card.Body>
 									<Card.Title>{elem.name}</Card.Title>
-									<Card.Text>Color Eyes: {elem.eye_color}</Card.Text>
+
 									<ButtonToolbar
 										className="justify-content-between d-flex"
 										aria-label="Toolbar with Button groups">
-										<Link to="/infoPeople/theid">
-											<Button variant="primary">Go To</Button>
+										<Link to="/infoPeople/:theid">
+											<Button variant="primary">Go To The Force</Button>
 										</Link>
-										<Link onClick={() => actions.addFavorite(planet.name, "people")}>
+										<Link onClick={() => actions.arrayFavorite(people.name, "people")}>
 											<Button variant="outline-warning">
 												<i className="far fa-heart" />
 											</Button>

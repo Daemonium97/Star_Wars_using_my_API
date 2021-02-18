@@ -2,20 +2,25 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
 import Iframe from "react-iframe";
+import ReactAudioPlayer from "react-audio-player";
+
+export const Music = () => {
+	return (
+		<Iframe
+			id="music"
+			width="100%"
+			height="315"
+			src="https://www.youtube.com/embed/pilqN-Q_2Vw?controls=0&amp;start=28"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen
+		/>
+	);
+};
 
 export const Carrusel = () => {
 	return (
 		<Carousel>
-			{/* // 	<Iframe
-		// 		id="music"
-		// 		width="100%"
-		// 		height="315"
-		// 		src="https://www.youtube.com/embed/pilqN-Q_2Vw?controls=0&amp;start=28"
-		// 		frameborder="0"
-		// 		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-		// 		allowfullscreen
-		// 	/> */}
-
 			<Carousel.Item>
 				<Link to="/people/ka">
 					<img

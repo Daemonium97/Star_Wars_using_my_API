@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import { Carrusel } from "./views/home";
+import { Carrusel, Music } from "./views/home";
 
 import injectContext, { Context } from "./store/appContext";
 
@@ -29,6 +29,7 @@ const Layout = () => {
 				<Navbar />
 				<Switch>
 					<Route exact path="/">
+						<Music />
 						<Carrusel />
 					</Route>
 

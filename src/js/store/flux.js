@@ -1,3 +1,5 @@
+import { array } from "prop-types";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -17,7 +19,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ people: data.results });
 			},
 			getPlanets: async () => {
-				const url = "https://swapi.dev/api/planet/";
+				const url = "https://swapi.dev/api/planets/";
 				const response = await fetch(url);
 				const data = await response.json();
 				setStore({ planets: data.results });
