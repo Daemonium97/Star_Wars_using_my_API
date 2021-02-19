@@ -24,7 +24,7 @@ export const Carrusel = () => {
 			<Carousel.Item>
 				<Link to="/people/ka">
 					<img
-						className="d-block w-100"
+						className="d-block w-200"
 						src="https://starwarsblog.starwars.com/wp-content/uploads/sites/6/2016/09/10StarkillerBase.jpeg"
 						alt="First slide"
 					/>

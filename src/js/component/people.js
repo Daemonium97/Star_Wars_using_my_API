@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import PropTypes from "prop-types";
@@ -6,6 +6,8 @@ import { Container, Row, Col, Button, ButtonToolbar } from "react-bootstrap";
 import { Context } from "../store/appContext";
 
 export const People = props => {
+	const { store, actions } = useContext(Context);
+	const { searchItem, setSearch } = useState();
 	return (
 		<Container fluid>
 			<Row>
@@ -26,7 +28,7 @@ export const People = props => {
 										<Link to={`/infoPeople/${index}`}>
 											<Button variant="primary">Go To The Force</Button>
 										</Link>
-										<Link onClick={() => actions.addFavorite((elem.name, "people"))}>
+										<Link onClick={() => actions.addFavorite(elem.name, "people")}>
 											<Button variant="outline-warning">
 												<i className="far fa-heart" />
 											</Button>
