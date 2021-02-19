@@ -26,21 +26,19 @@ export const MyNavbar = () => {
 								<Dropdown.Item eventKey={i} key={i} onClick={() => actions.deleteFavorite(i)}>
 									{fav.type == "people" ? (
 										<div>
-											<i className="fas fa-cat">
-												&nbsp;
-												{fav.name}
-											</i>
+											<img src="https://img.icons8.com/ios/26/000000/maneki--v1.png" />
+											&nbsp;
+											{fav.name}
 											&nbsp;&nbsp;&nbsp;
-											<i className="fas fa-skull-crossbones" />
+											<img src="https://img.icons8.com/ios/26/000000/maneki--v1.png" />
 										</div>
 									) : (
 										<div>
-											<i className="fas fa-cat">
-												&nbsp;
-												{fav.name}
-											</i>
+											<img src="https://img.icons8.com/ios/26/000000/maneki--v1.png" />
+											&nbsp;
+											{fav.name}
 											&nbsp;&nbsp;&nbsp;
-											<i className="fas fa-skull-crossbones" />
+											<img src="https://img.icons8.com/ios/26/000000/maneki--v1.png" />
 										</div>
 									)}
 								</Dropdown.Item>
