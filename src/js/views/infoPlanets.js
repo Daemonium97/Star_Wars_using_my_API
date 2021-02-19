@@ -5,6 +5,7 @@ import Card from "react-bootstrap/Card";
 import { Container, Row, Col, Button, ButtonToolbar } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
+import { CardBody } from "reactstrap";
 
 export const InfoPlanets = props => {
 	const params = useParams();
@@ -17,21 +18,23 @@ export const InfoPlanets = props => {
 					<Card>
 						<Card.Img
 							variant="top"
-							src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-characters-ranked-1577122930.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*"
+							src="https://sm.ign.com/t/ign_za/gallery/e/every-plan/every-planet-and-location-in-star-wars-battlefront-2s-multip_uxzr.1080.jpg"
 						/>
 					</Card>
 				</Col>
 
 				<Col>
 					<Card style={{ width: "18rem" }}>
-						<Card.Title>{e.name}</Card.Title>
-						<Card.Text>Rotation Period: {e.rotation_period}</Card.Text>
-						<Card.Text>Orbital Period: {e.orbital_period}</Card.Text>
-						<Card.Text>
-							Diameter:
-							{e.diameter}
-						</Card.Text>
-						<Card.Text>Climate: {e.climate}</Card.Text>
+						<CardBody>
+							<Card.Title>{e.name}</Card.Title>
+							<Card.Text>Rotation Period: {e.rotation_period}</Card.Text>
+							<Card.Text>Orbital Period: {e.orbital_period}</Card.Text>
+							<Card.Text>
+								Diameter:
+								{e.diameter}
+							</Card.Text>
+							<Card.Text>Climate: {e.climate}</Card.Text>
+						</CardBody>
 					</Card>
 					<Link to="/planets/go">
 						<Button id="infoPlanetButton" variant="primary">
