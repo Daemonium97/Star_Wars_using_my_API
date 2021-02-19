@@ -18,8 +18,7 @@ export const Planets = props => {
 								/>
 								<Card.Body>
 									<Card.Title>{elem.name}</Card.Title>
-									<Card.Text>Population: {elem.population}</Card.Text>
-									<Card.Text>Climate: {elem.climate}</Card.Text>
+
 									<ButtonToolbar
 										className="justify-content-between d-flex"
 										aria-label="Toolbar with Button groups">
