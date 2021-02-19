@@ -14,7 +14,7 @@ export const Planets = props => {
 							<Card>
 								<Card.Img
 									variant="top"
-									src="https://static.wikia.nocookie.net/esstarwars/images/b/b0/Tatooine_TPM.png/revision/latest?cb=20131214162357"
+									src="https://d2cdo4blch85n8.cloudfront.net/wp-content/uploads/2019/08/Planet-with-Three-Suns-Discovered-Featured-image.jpg"
 								/>
 								<Card.Body>
 									<Card.Title>{elem.name}</Card.Title>
@@ -23,7 +23,7 @@ export const Planets = props => {
 									<ButtonToolbar
 										className="justify-content-between d-flex"
 										aria-label="Toolbar with Button groups">
-										<Link to="/infoPlanet/index">
+										<Link to={`/infoPlanets/${index}`}>
 											<Button variant="primary">Go To</Button>
 										</Link>
 										<Link onClick={() => actions.addFavorite(elem.name, "planet")}>

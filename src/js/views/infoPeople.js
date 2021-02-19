@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import PropTypes from "prop-types";
@@ -6,10 +6,11 @@ import { Container, Row, Col, Button, ButtonToolbar } from "react-bootstrap";
 import { Context } from "../store/appContext";
 
 export const InfoPeople = props => {
+	const { store, actions } = useContext(Context);
 	return (
 		<Container>
 			<Row>
-				{props.data.map((e, index) => {
+				{store.people.map((e, index) => {
 					return (
 						<Col key={index} md={3} className="mt-1 mb-1">
 							<Card>

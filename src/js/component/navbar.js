@@ -4,7 +4,7 @@ import { DropdownButton, Dropdown, Navbar } from "react-bootstrap";
 import { Context } from "../store/appContext";
 
 export const MyNavbar = () => {
-	const { setStore, actions } = React.useContext(Context);
+	const { store, actions } = React.useContext(Context);
 
 	return (
 		// <nav className="navbar navbar-dark bg-dark mb-3">
@@ -32,7 +32,7 @@ export const MyNavbar = () => {
 			<Navbar.Collapse className="justify-content-end">
 				<Navbar.Text>
 					<DropdownButton className="dropdown-basic-button" title="Favorites" />
-					{setStore.favorites}
+					{store.favorites}
 				</Navbar.Text>
 			</Navbar.Collapse>
 		</Navbar>
