@@ -27,13 +27,9 @@ export const InfoPlanets = props => {
 					<Card style={{ width: "18rem" }}>
 						<CardBody>
 							<Card.Title>{e.name}</Card.Title>
-							<Card.Text>Rotation Period: {e.rotation_period}</Card.Text>
-							<Card.Text>Orbital Period: {e.orbital_period}</Card.Text>
-							<Card.Text>
-								Diameter:
-								{e.diameter}
-							</Card.Text>
-							<Card.Text>Climate: {e.climate}</Card.Text>
+							<Card.Text>Weather: {e.weather}</Card.Text>
+							<Card.Text>Diameter: {e.diameter}</Card.Text>
+							<Card.Text>Orbital : {e.orbital}</Card.Text>
 						</CardBody>
 					</Card>
 					<Link to="/planets/go">
