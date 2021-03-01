@@ -24,14 +24,10 @@ export const InfoPeople = props => {
 					<Card style={{ width: "18rem" }}>
 						<Card.Body>
 							<Card.Title>{e.name}</Card.Title>
-							<Card.Text>Height: {e.height}</Card.Text>
+							<Card.Text>Age: {e.age}</Card.Text>
 							<Card.Text>Hair Color: {e.hair_color}</Card.Text>
-							<Card.Text>
-								Eye Color:
-								{e.eye_color}
-							</Card.Text>
-							<Card.Text>Gender: {e.gender}</Card.Text>
-							<Card.Text>Birth Year: {e.birth_year}</Card.Text>
+							<Card.Text>BirthYear: {e.birthday}</Card.Text>
+							<Card.Text>Skin Color: {e.skin_color}</Card.Text>
 						</Card.Body>
 					</Card>
 					<Link to="/people/ka">
