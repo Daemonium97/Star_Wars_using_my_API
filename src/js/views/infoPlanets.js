@@ -16,10 +16,7 @@ export const InfoPlanets = props => {
 			<Row className="justify-content-md-center">
 				<Col>
 					<Card>
-						<Card.Img
-							variant="top"
-							src="https://sm.ign.com/t/ign_za/gallery/e/every-plan/every-planet-and-location-in-star-wars-battlefront-2s-multip_uxzr.1080.jpg"
-						/>
+						<Card.Img variant="top" src={e.img} />
 					</Card>
 				</Col>
 

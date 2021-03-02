@@ -15,10 +15,7 @@ export const Planets = props => {
 					return (
 						<Col key={index} md={3} className="mt-1 mb-1">
 							<Card>
-								<Card.Img
-									variant="top"
-									src="https://d2cdo4blch85n8.cloudfront.net/wp-content/uploads/2019/08/Planet-with-Three-Suns-Discovered-Featured-image.jpg"
-								/>
+								<Card.Img variant="top" src={elem.img} />
 								<Card.Body>
 									<Card.Title>{elem.name}</Card.Title>
 
