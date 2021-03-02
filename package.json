@@ -78,6 +78,7 @@
 	},
 	"dependencies": {
 		"bootstrap": "^4.6.0",
+		"bootswatch": "^4.6.0",
 		"mdbreact": "^5.0.1",
 		"prop-types": "^15.6.1",
 		"react": "^16.14.0",

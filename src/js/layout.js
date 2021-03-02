@@ -11,6 +11,7 @@ import { People } from "./component/people";
 import { Planets } from "./component/planets";
 import { InfoPeople } from "./views/infoPeople";
 import { InfoPlanets } from "./views/infoPlanets";
+import { Login } from "./component/login";
 
 //create your first component
 const Layout = () => {
@@ -26,24 +27,30 @@ const Layout = () => {
 	return (
 		<div className="d-flex flex-column">
 			<BrowserRouter basename={basename}>
-				<MyNavbar />
 				<Switch>
 					<Route exact path="/">
+						<Login />
+					</Route>
+
+					<Route exact path="/home">
+						<MyNavbar />
 						<Music />
 						<Carrusel />
 					</Route>
-
 					<Route exact path="/people/:theid">
+						<MyNavbar />
 						<People data={store.people} />
 					</Route>
 					<Route exact path="/infoPeople/:theid">
+						<MyNavbar />
 						<InfoPeople data={store.people} />
 					</Route>
 					<Route exact path="/planets/:theid">
+						<MyNavbar />
 						<Planets data={store.planets} />
 					</Route>
-
 					<Route exact path="/infoPlanets/:theid">
+						<MyNavbar />
 						<InfoPlanets data={store.planets} />
 					</Route>
 				</Switch>

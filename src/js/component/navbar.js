@@ -8,7 +8,7 @@ export const MyNavbar = () => {
 
 	return (
 		<Navbar bg="dark" variant="dark">
-			<Link to="/">
+			<Link to="/home">
 				<Navbar.Brand>
 					<img src="https://img.icons8.com/color/64/000000/star-wars.png" />
 				</Navbar.Brand>
