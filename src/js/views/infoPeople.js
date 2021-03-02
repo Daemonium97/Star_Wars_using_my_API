@@ -14,10 +14,7 @@ export const InfoPeople = props => {
 			<Row className="justify-content-md-center">
 				<Col>
 					<Card>
-						<Card.Img
-							variant="top"
-							src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/star-wars-characters-ranked-1577122930.jpg?crop=0.502xw:1.00xh;0.250xw,0&resize=640:*"
-						/>
+						<Card.Img variant="top" src={e.img} />
 					</Card>
 				</Col>
 				<Col>

@@ -15,10 +15,7 @@ export const People = props => {
 					return (
 						<Col key={index} md={3} className="mt-1 mb-1">
 							<Card>
-								<Card.Img
-									variant="top"
-									src="https://www.orlandosentinel.com/resizer/OhxcxUlLIH0dlcwMZuSne-5hI5o=/1200x0/top/www.trbimg.com/img-52cda019/turbine/os-greatest-star-wars-characters-pictures"
-								/>
+								<Card.Img variant="top" src={elem.img} />
 								<Card.Body>
 									<Card.Title>{elem.name}</Card.Title>
 
