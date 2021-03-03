@@ -13,6 +13,11 @@ export const Login = () => {
 	return (
 		<Container className="d-flex justify-content-center mt-5">
 			<div className="login justify-content-center">
+				<img
+					src="https://steamuserimages-a.akamaihd.net/ugc/778485568507998099/863B13FCB3DE280FC637EA25A48F24F142E79E9A/"
+					width="800"
+					height="600"
+				/>
 				<form onSubmit={handleSumit} className="card card-body">
 					<div className="form-group">
 						<input
@@ -34,7 +39,7 @@ export const Login = () => {
 						/>
 					</div>
 					<Link to="/home">
-						<button className="btn btn-primary btn-block">Create</button>
+						<button className="btn btn-primary btn-block">Go</button>
 					</Link>
 				</form>
 			</div>
