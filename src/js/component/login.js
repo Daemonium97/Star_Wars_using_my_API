@@ -5,21 +5,31 @@ import { Container } from "react-bootstrap";
 export const Login = () => {
 	const [email, setEmail] = useState("");
 	const [pass, setPass] = useState("");
-	const handleSumit = async e => {
+	const handleSubmit = e => {
 		e.preventDefault();
 		console.log(email, pass);
-		const res = fetch("https://3000-turquoise-flea-knol8qvq.ws-us03.gitpod.io/user", {
+		fetch("https://3000-crimson-galliform-kx67qphg.ws-us03.gitpod.io/user", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
 			},
 			body: JSON.stringify({
-				email,
-				pass
+				email: email,
+				password: pass
 			})
-		});
-		const data = await res.json();
-		console.log(data);
+		})
+			.then(res => {
+				if (res.ok) {
+					console.log("Exito");
+				} else {
+					console.log("NO exito");
+				}
+
+				return res.json();
+			})
+			.then(data => {
+				console.table(data);
+			});
 	};
 
 	return (
@@ -30,7 +40,7 @@ export const Login = () => {
 					width="800"
 					height="600"
 				/>
-				<form onSubmit={handleSumit} className="card card-body">
+				<form onSubmit={handleSubmit} className="card card-body">
 					<div className="form-group">
 						<input
 							type="email"
@@ -50,9 +60,9 @@ export const Login = () => {
 							placeholder="Password"
 						/>
 					</div>
-					<Link to="/home">
-						<button className="btn btn-primary btn-block">Go</button>
-					</Link>
+					{/* <Link to="/home"> */}
+					<button className="btn btn-primary btn-block">Create</button>
+					{/* </Link> */}
 				</form>
 			</div>
 		</Container>
