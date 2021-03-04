@@ -31,6 +31,8 @@ const Layout = () => {
 				<Switch>
 					<Route exact path="/">
 						<Register />
+					</Route>
+					<Route exact path="/login">
 						<Login />
 					</Route>
 

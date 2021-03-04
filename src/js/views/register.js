@@ -17,7 +17,6 @@ export const Register = () => {
 		const data = { email: email, password: pass };
 		fetch("https://3000-olive-porcupine-0p25cx86.ws-us03.gitpod.io/register", {
 			method: "POST",
-			mode: "no-cors",
 			headers: {
 				"Content-Type": "application/json"
 			},
