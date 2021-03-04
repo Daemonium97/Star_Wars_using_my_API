@@ -1,28 +1,33 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { Container } from "react-bootstrap";
+import { useHistory, Redirect } from "react-router-dom/cjs/react-router-dom.min";
 
 export const Login = () => {
 	const [email, setEmail] = useState("");
 	const [pass, setPass] = useState("");
+	const [redirect, setRedirect] = useState(false);
 	let history = useHistory();
 	const handleSubmit = e => {
 		e.preventDefault();
+		if (email == "" || pass == "") {
+			alert("Correo o Contraseña inválidos");
+		}
 		console.log(email, pass);
-		const res = fetch("https://3000-red-wallaby-7bi5c0rp.ws-us03.gitpod.io/user", {
+
+		//Fetch
+		const data = { email: email, password: pass };
+		fetch("https://3000-olive-porcupine-0p25cx86.ws-us03.gitpod.io/register", {
 			method: "POST",
 			mode: "no-cors",
 			headers: {
 				"Content-Type": "application/json"
 			},
-			body: JSON.stringify({
-				email: email,
-				password: pass
-			})
+			body: JSON.stringify(data)
 		})
-			.then(res => res.json())
+			.then(response => response.json())
 			.then(data => {
-				console.table(data);
+				console.log("Success:", data);
+				sessionStorage.setItem("u_token", data.token);
+				setRedirect(true);
 			})
 			.catch(error => {
 				console.log(error);
@@ -30,7 +35,7 @@ export const Login = () => {
 	};
 
 	return (
-		<Container className="d-flex justify-content-center mt-5">
+		<div className="text-center mt-5 d-flex justify-content-center align-items-center">
 			<div className="login justify-content-center">
 				<img
 					src="https://steamuserimages-a.akamaihd.net/ugc/778485568507998099/863B13FCB3DE280FC637EA25A48F24F142E79E9A/"
@@ -58,11 +63,10 @@ export const Login = () => {
 						/>
 					</div>
 
-					<button className="btn btn-primary btn-block" onClick={history.push("/home")}>
-						Create User
-					</button>
+					<button className="btn btn-primary btn-block">New? Create User</button>
 				</form>
+				{redirect ? <Redirect to="/home" /> : ""}
 			</div>
-		</Container>
+		</div>
 	);
 };
