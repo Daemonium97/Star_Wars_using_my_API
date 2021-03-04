@@ -10,6 +10,7 @@ export const Login = () => {
 		console.log(email, pass);
 		fetch("https://3000-crimson-galliform-kx67qphg.ws-us03.gitpod.io/user", {
 			method: "POST",
+			mode: "no-cors",
 			headers: {
 				"Content-Type": "application/json"
 			},
@@ -18,17 +19,12 @@ export const Login = () => {
 				password: pass
 			})
 		})
-			.then(res => {
-				if (res.ok) {
-					console.log("Exito");
-				} else {
-					console.log("NO exito");
-				}
-
-				return res.json();
-			})
+			.then(res => res.json())
 			.then(data => {
 				console.table(data);
+			})
+			.catch(error => {
+				console.log(error);
 			});
 	};
 
