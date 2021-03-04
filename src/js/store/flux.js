@@ -14,13 +14,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Use getActions to call a function within a fuction
 
 			getPeople: async () => {
-				const url = "https://3000-crimson-galliform-kx67qphg.ws-us03.gitpod.io/people";
+				const url = "https://3000-red-wallaby-7bi5c0rp.ws-us03.gitpod.io/people";
 				const response = await fetch(url);
 				const data = await response.json();
 				setStore({ people: data });
 			},
 			getPlanets: async () => {
-				const url = "https://3000-crimson-galliform-kx67qphg.ws-us03.gitpod.io/planets";
+				const url = "https://3000-red-wallaby-7bi5c0rp.ws-us03.gitpod.io/planets";
 				const response = await fetch(url);
 				const data = await response.json();
 				setStore({ planets: data });

@@ -8,7 +8,7 @@ export const Login = () => {
 	const handleSubmit = e => {
 		e.preventDefault();
 		console.log(email, pass);
-		fetch("https://3000-crimson-galliform-kx67qphg.ws-us03.gitpod.io/user", {
+		const res = fetch("https://3000-red-wallaby-7bi5c0rp.ws-us03.gitpod.io/user", {
 			method: "POST",
 			mode: "no-cors",
 			headers: {
@@ -57,7 +57,7 @@ export const Login = () => {
 						/>
 					</div>
 					{/* <Link to="/home"> */}
-					<button className="btn btn-primary btn-block">Create</button>
+					<button className="btn btn-primary btn-block">Create User</button>
 					{/* </Link> */}
 				</form>
 			</div>
