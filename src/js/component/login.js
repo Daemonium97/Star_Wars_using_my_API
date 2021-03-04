@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link, Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import { Container } from "react-bootstrap";
 
 export const Login = () => {
@@ -56,9 +56,9 @@ export const Login = () => {
 							placeholder="Password"
 						/>
 					</div>
-					{/* <Link to="/home"> */}
-					<button className="btn btn-primary btn-block">Create User</button>
-					{/* </Link> */}
+					<Redirect to="/home">
+						<button className="btn btn-primary btn-block">Create User</button>
+					</Redirect>
 				</form>
 			</div>
 		</Container>
