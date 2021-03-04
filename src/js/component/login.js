@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { Container } from "react-bootstrap";
 
 export const Login = () => {
 	const [email, setEmail] = useState("");
 	const [pass, setPass] = useState("");
+	let history = useHistory();
 	const handleSubmit = e => {
 		e.preventDefault();
 		console.log(email, pass);
@@ -56,9 +57,10 @@ export const Login = () => {
 							placeholder="Password"
 						/>
 					</div>
-					<Redirect to="/home">
-						<button className="btn btn-primary btn-block">Create User</button>
-					</Redirect>
+
+					<button className="btn btn-primary btn-block" onClick={history.push("/home")}>
+						Create User
+					</button>
 				</form>
 			</div>
 		</Container>
