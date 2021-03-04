@@ -11,7 +11,8 @@ import { People } from "./component/people";
 import { Planets } from "./component/planets";
 import { InfoPeople } from "./views/infoPeople";
 import { InfoPlanets } from "./views/infoPlanets";
-import { Login } from "./component/login";
+import { Register } from "./views/register";
+import { Login } from "./views/login";
 
 //create your first component
 const Layout = () => {
@@ -29,6 +30,7 @@ const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<Switch>
 					<Route exact path="/">
+						<Register />
 						<Login />
 					</Route>
 
