@@ -11,13 +11,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 			// Use getActions to call a function within a fuction
 
 			getPeople: async () => {
-				const url = "https://3000-olive-porcupine-0p25cx86.ws-us03.gitpod.io/people";
+				const url = "https://3000-tomato-panda-b8wf0ukp.ws-us03.gitpod.io/people";
 				const response = await fetch(url);
 				const data = await response.json();
 				setStore({ people: data });
 			},
 			getPlanets: async () => {
-				const url = "https://3000-olive-porcupine-0p25cx86.ws-us03.gitpod.io/planets";
+				const url = "https://3000-tomato-panda-b8wf0ukp.ws-us03.gitpod.io/planets";
 				const response = await fetch(url);
 				const data = await response.json();
 				setStore({ planets: data });

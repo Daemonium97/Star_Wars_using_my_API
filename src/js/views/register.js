@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
+import { Redirect, Link } from "react-router-dom/cjs/react-router-dom.min";
 
 export const Register = () => {
 	const [email, setEmail] = useState("");
@@ -8,14 +8,19 @@ export const Register = () => {
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		if (email == "" || pass == "") {
-			alert("Correo o Contraseña inválidos");
+		if (email === "" && pass === "") {
+			alert("Ingrese el correo y la contraseña");
+		} else if (email === "") {
+			alert("Por favor ingrese un correo");
+		} else if (pass === "") {
+			alert("Por favor ingrese una contraseña");
 		}
+
 		console.log(email, pass);
 
 		//Fetch
 		const data = { email: email, password: pass };
-		fetch("https://3000-olive-porcupine-0p25cx86.ws-us03.gitpod.io/register", {
+		fetch("https://3000-tomato-panda-b8wf0ukp.ws-us03.gitpod.io/register", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json"
@@ -30,6 +35,14 @@ export const Register = () => {
 			.catch(error => {
 				console.error("Error:", error);
 			});
+	};
+
+	const CheckFields = () => {
+		if (email === "" || pass === "") {
+			return "Faltan espacios por rellenar";
+		} else {
+			redirect ? <Redirect to="/login" /> : "";
+		}
 	};
 
 	return (
@@ -60,8 +73,12 @@ export const Register = () => {
 					</div>
 
 					<button className="btn btn-primary btn-block">New? Create User</button>
+					<Link to="/login">
+						<button className="btn btn-primary btn-block mt-3">Already have an account? Log in</button>
+					</Link>
 				</form>
-				{redirect ? <Redirect to="/login" /> : ""}
+
+				{CheckFields}
 			</div>
 		</div>
 	);
