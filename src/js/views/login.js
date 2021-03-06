@@ -33,6 +33,13 @@ export const Login = () => {
 				console.error("Error:", error);
 			});
 	};
+	const CheckFields = () => {
+		if (email === "" || pass === "") {
+			alert("Faltan espacios por rellenar");
+		} else if (email === email && pass === pass) {
+			redirect ? <Redirect to="/home" /> : "";
+		}
+	};
 
 	return (
 		<div className="text-center mt-5 d-flex justify-content-center align-items-center">
@@ -63,7 +70,7 @@ export const Login = () => {
 
 					<button className="btn btn-primary btn-block">Log in</button>
 				</form>
-				{redirect ? <Redirect to="/home" /> : ""}
+				{CheckFields()}
 			</div>
 		</div>
 	);

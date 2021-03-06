@@ -37,14 +37,6 @@ export const Register = () => {
 			});
 	};
 
-	const CheckFields = () => {
-		if (email === "" || pass === "") {
-			return "Faltan espacios por rellenar";
-		} else {
-			redirect ? <Redirect to="/login" /> : "";
-		}
-	};
-
 	return (
 		<div className="text-center mt-5 d-flex justify-content-center align-items-center">
 			<div className="login justify-content-center">
@@ -78,7 +70,7 @@ export const Register = () => {
 					</Link>
 				</form>
 
-				{CheckFields}
+				{redirect ? <Redirect to="/login" /> : ""}
 			</div>
 		</div>
 	);
